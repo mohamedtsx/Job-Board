@@ -5,15 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { JobContextProvider } from './context/jobs.context';
-
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <JobContextProvider>
-      <App />
-    </JobContextProvider>
+  <BrowserRouter>
+      <JobContextProvider>
+        <App />
+      </JobContextProvider>
+  </BrowserRouter>
   </React.StrictMode>
 );
 

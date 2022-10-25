@@ -1,0 +1,50 @@
+header {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: url('../../assets/banner.svg');
+    background-size: cover;
+    position: relative;
+}
+
+.hero {
+    width: 128.3rem;
+    height: 51.1rem;
+    margin-left: 4rem;
+
+    position: absolute;
+    top: 15.8rem;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.hero_text {
+    width: 63.5rem;
+    height: 24.5rem;
+    color: #fff;
+    position: absolute;
+    top: 6.7rem;
+
+}
+
+.hero_text h4 {
+    font-weight: 500;
+    font-size: 3rem;
+    margin-bottom: 1.4rem;
+}
+
+.hero_text h1 {
+    font-weight: 600;
+    font-size: 5.6rem;
+    text-transform: capitalize;
+    margin-bottom: 1.6rem;
+}
+
+.hero_text p {
+    font-weight: 500;
+    margin-bottom: 4.1rem;    
+}
+
+.hero-image {
+    float: right;
+}

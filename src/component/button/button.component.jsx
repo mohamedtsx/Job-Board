@@ -1,7 +1,7 @@
 import { 
     baseBtn, 
     addToFavoritesBtn, 
-    removeJobBtn 
+    removeJobBtn,
 } from "./button.style";
 
 export const BUTTON_TYPES = {
@@ -13,7 +13,7 @@ export const BUTTON_TYPES = {
 const getButton = (buttonType = BUTTON_TYPES.base) => ({
     [BUTTON_TYPES.base]: baseBtn,
     [BUTTON_TYPES.addToFavorites]: addToFavoritesBtn,
-    [BUTTON_TYPES.removeJob]: removeJobBtn
+    [BUTTON_TYPES.removeJob]: removeJobBtn,
 }[buttonType]);
 
 

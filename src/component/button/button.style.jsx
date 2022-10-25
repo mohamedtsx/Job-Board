@@ -1,17 +1,22 @@
 import styled from 'styled-components';
 
 export const baseBtn = styled.button`
-    background-color: red;
-    padding: 15px;
+    height: 5.1rem;
+    padding: 1.6rem 2.5rem;
 
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: capitalize; 
+    
+    border-radius: 0.4rem;
+    background-color: #00D363;
 `
 
 export const addToFavoritesBtn = styled.button`
     background-color: green;
-    padding: 15px;
 `
 
 export const removeJobBtn = styled.button`
     background-color: blue;
-    padding: 15px;
+    
 `
