@@ -1,10 +1,10 @@
 import './header.style.css';
 import Illustration  from '../../assets/hero-illustration.png';
 import Button from '../button/button.component';
-import { Link } from 'react-router-dom';
+
 const Header = () => {
     return(
-        <header>
+        <header className='home-header'>
             <section className='hero'>
                 <div className='hero_text'>
                     <h4>999+ job listed</h4>
@@ -12,11 +12,11 @@ const Header = () => {
                     <p>
                         We provide online instant cash loans with quick approval that suit your term length
                     </p>
-                    {/* <a href='#list'> */}
-                        <Button>start applying now</Button>
-                    {/* </a> */}
+                    <Button>start applying now</Button>
                 </div>
-                <img className='hero-image' src={Illustration} alt='hero'/>
+                <div className='hero-image'>
+                    <img src={Illustration} alt='hero'/>
+                </div>
             </section>
         </header>
     )

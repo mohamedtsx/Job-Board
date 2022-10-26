@@ -13,7 +13,7 @@ export const JobContextProvider = ({children}) => {
     const getJobsList = async () => {
         const response = await fetch("https://gdsc-job-app.herokuapp.com/api/jobs");
         const data = await response.json();
-        setJobs(data);
+        setJobs(data.data);
     }
     
     return <JobContext.Provider value={value}>{children}</JobContext.Provider>;

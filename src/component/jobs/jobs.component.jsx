@@ -1,11 +1,18 @@
+import './jobs.style.css';
+
 import JobItem from "../job-item/job-item.component";
 
+import { useContext } from "react";
+import { JobContext } from '../../context/jobs.context';  
+
 const Jobs = () => {
+    const { jobs } = useContext(JobContext);
+
     return(
         <section id="list" className="jobs">
-            <h2>job listing</h2>
+            <h2>jobs listing</h2>
             {
-                ['one','two','three'].map(job => (<JobItem key={job} item={job}/>))
+                jobs.map(job => (<JobItem key={job.id} item={job}/>))
             }
         </section>
     );
