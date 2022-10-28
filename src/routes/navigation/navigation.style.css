@@ -2,26 +2,42 @@ nav {
     width: 90%;
     max-width: 136.1rem;
     height: 5.9rem;
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: transparent;
+    /*flex-wrap: wrap;
+    */background-color: transparent;
     padding: 0 1rem;
     margin: 1rem auto;
-    
     position: absolute;
     top: 1rem;
     left: 50%;
     transform: translate(-50%,0);
     z-index: 99;
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
 }
+
 
 .nav_list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     gap: 2rem;
+    overflow: hidden;
+    transition: height 500ms;
+    -webkit-transition: height 500ms;
+    -moz-transition: height 500ms;
+    -ms-transition: height 500ms;
+    -o-transition: height 500ms;
 }
+
+.nav_list.active {
+    height: 6rem;
+ }
 
 .sign-in {
     font-size: 1.8rem;
@@ -29,4 +45,17 @@ nav {
     text-transform: capitalize;
     color: #fff;
     text-decoration: none;
+}
+
+@media screen and (max-width: 500px){
+    .nav-logo {
+        width: 15rem;
+    }
+
+    .nav_list {
+        height: 0;
+        position: absolute;
+        top: 6rem;
+        width: 100%;
+    }
 }

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const JobItemSt = styled.div`
-    height: 14.4rem;
     border-reduce: 0.4rem;
     margin: 1.2rem auto;
     text-transform: capitalize;
@@ -10,14 +9,26 @@ export const JobItemSt = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2.1vw 2.3vw;
+    overflow: hidden;
 
-    padding: 0 3.4rem;
+    @media screen and (max-width: 560px) {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
 `
 
 export const Info = styled.div`
+    flex-grow: 1;
     display: flex;
     gap: 2rem;
     align-items: center;
+    padding-right: 1rem;
+
+
+    h1 {
+        font-size: 2.4rem;
+    }
 
     img {
         width: 8.2rem;
@@ -26,15 +37,26 @@ export const Info = styled.div`
     }
 
     .text-container {
-        width: 31.9rem;
-
+        min-width: 21.5rem;
+        width: 100%;
     }
 
     .highlights {
-        margin-top: 1.2rem;
+        max-width: 32rem;
+        margin: 1.2rem 1rem 1.2rem 0;
         color: #777; 
         display: flex;
         justify-content: space-between;
+    }
+
+    @media screen and (max-width: 560px) {
+        h1 {
+            font-size: 1.8rem;
+        }
+        img {
+            width: 6.5rem;
+            height: 6.5rem;
+        }
     }
 `
 
@@ -42,7 +64,7 @@ export const Actions = styled.div`
     font-size: 1.4rem;
     width: 18.1rem;
     height: 7.7rem;
-    border: 1px solid #EFFDF5;
+    border: 0.1rem solid #EFFDF5;
 
     display: grid;
     grid-template-columns: repeat(2,auto);
@@ -53,6 +75,17 @@ export const Actions = styled.div`
         grid-column: span 2;
         justify-self: end;
         color: #777;
+    }
+
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        height: auto;
+        padding-bottom: 0.6rem;
+        span {
+            grid-row-start: 1;
+            grid-column-end: 1;
+            justify-self: start;
+        }
     }
 `
 

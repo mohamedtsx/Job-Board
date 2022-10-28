@@ -28,8 +28,10 @@ export const removeJobBtn = styled.button`
 `
 
 export const baseMiniBtn = styled.button`
-    width: 11.8rem;
     height: 4.2rem;
+    overflow:hidden;
+    padding: 0 2.5rem;
+
     weight: 700;
     font-size: 1.4rem;
     border: none;
@@ -40,4 +42,48 @@ export const baseMiniBtn = styled.button`
     border-radius: 0.4rem;
     background-color: #00D363;
     cursor: pointer;
+`
+
+export const dropdownToggleBtn = styled.button`
+    width: 4rem;
+    height: 4.2rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: none;
+
+    span {
+        display: block;
+        width: 3rem;
+        height: 0.3rem;
+        background-color: #00D363;
+        position: absolute;
+        transition: all 500ms;
+    }
+
+    .top {
+        transform: translateY(-0.8rem);
+    }
+    .bottom {
+        transform: translateY(0.8rem);
+    }
+
+    &.active .mid{
+        transform: translateX(4rem);
+    }
+    &.active .top{
+        transform: translateY(0) rotate(45deg);
+        transition-delay: 125ms;
+    }
+    &.active .bottom{
+        transform: translateY(0) rotate(315deg);
+        transition-delay: 250ms;
+    }
+
+    @media screen and (max-width: 500px) {
+        display: block;
+    }
 `
