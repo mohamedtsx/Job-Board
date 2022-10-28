@@ -5,4 +5,4 @@
 
 ### work on
 - fixing job description parsing to html issue by using react-html-parser
-- maeking job page more responsive
+- making job page more responsive
