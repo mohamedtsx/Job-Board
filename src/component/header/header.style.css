@@ -131,3 +131,17 @@
         font-size: 3rem;
     }
 }
+
+@media screen and (max-width: 390px) {
+    .hero_text h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero_text h4 {
+        font-size: 1.8rem;
+    }
+
+    .hero_text p {
+        font-size: 1.4rem;
+    }
+}
