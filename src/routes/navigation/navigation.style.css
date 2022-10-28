@@ -5,8 +5,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*flex-wrap: wrap;
-    */background-color: transparent;
+    background-color: transparent;
     padding: 0 1rem;
     margin: 1rem auto;
     position: absolute;
@@ -70,8 +69,5 @@ nav {
         padding: 0 0.7rem;
         background-color: gray;
     }
-    /* .nav_list {
-        width: 100%;
-        padding: 0 2rem;
-    } */
+
 }
