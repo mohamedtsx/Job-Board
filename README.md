@@ -5,7 +5,7 @@
 > Project incomplete
 
 ### challenges 
-- [] find safe alternative to dangerouslySetInnerHTML
+- [ ] find safe alternative to dangerouslySetInnerHTML
 
 ### I'm working on
 - making job page more responsive
