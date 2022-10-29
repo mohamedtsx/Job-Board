@@ -19,7 +19,7 @@ project description ....
 
 ### challenges 
 - [ ] find safe alternative to dangerouslySetInnerHTML
-- [ ] write a project description (it taks a lot 🙄) 
+- [ ] write a project description (it taks a lot 😂) 
 
 ### working on
 - making job page more responsive
