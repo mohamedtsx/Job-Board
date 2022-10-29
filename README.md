@@ -8,7 +8,7 @@
 
 --------------------
 
-# GDSC Job Board Landing Page >incomplete
+# GDSC Job Board Landing Page
 project description ....
 
 --------------------
@@ -23,3 +23,4 @@ project description ....
 ### working on
 - making job page more responsive
 
+> project incomplete
