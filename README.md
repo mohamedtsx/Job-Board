@@ -14,9 +14,6 @@ project description ....
 --------------------
 
 ## monitor feedback
-<<<<<<< HEAD
-![image](shorturl.at/lIKZ2)
-=======
 ![image](../readme/monitor-feedback/responsive/responsive-10-_-10.svg)
 ![image](../readme/monitor-feedback/clean/clean-code-10-_-9.svg)
 ![image](../readme/monitor-feedback/rate/rate-a.svg)
@@ -36,6 +33,3 @@ project description ....
 - making job page more responsive
 
 > project incomplete
-
-
-# temp
