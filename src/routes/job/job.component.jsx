@@ -15,17 +15,17 @@ const Job = () => {
     let { id } = useParams();
     id =  Number(id);
 
+    const job = jobs.find(el => el.id === id);
+    if(!job) {return;}
 
     let {
         company_email,company_logo,
         company_name,created_at,
         description,location,
         salary,title,type,vacancy
-    } = jobs.find(el => el.id === id);
-
+    } = job;
     type = type === 1 ? 'full time' : 'part time';
     created_at = new Date(`${created_at}`).toLocaleDateString();
-    // npm i react-html-parser: to use description
 
 
     return(
