@@ -13,10 +13,7 @@ project description ....
 
 --------------------
 ## monitor feedback
-|ForTheBadge uses-git|
-
-.. |ForTheBadge uses-git| image:: http://ForTheBadge.com/images/badges/uses-git.svg
-   :target: https://GitHub.com/
+[![ForTheBadge responsive design-badges](http://ForTheBadge.com/images/badges/uses-badges.svg)](http://ForTheBadge.com)
 
 
 
