@@ -8,14 +8,13 @@
 
 --------------------
 
-# GDSC Job Board Landing Page
+# GDSC Job Board Landing Page [incomplete]
 project description ....
 
 --------------------
 
 
 
-> Project incomplete
 
 ### challenges 
 - [ ] find safe alternative to dangerouslySetInnerHTML
