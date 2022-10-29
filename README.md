@@ -8,7 +8,7 @@
 
 --------------------
 
-# GDSC Job Board Landing Page [incomplete]
+# GDSC Job Board Landing Page <incomplete>
 project description ....
 
 --------------------
