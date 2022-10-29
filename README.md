@@ -14,15 +14,6 @@ project description ....
 --------------------
 
 ## monitor feedback
-![image](../readme/monitor-feedback/responsive/responsive-10-_-10.svg)
-![image](../readme/monitor-feedback/clean/clean-code-10-_-9.svg)
-![image](../readme/monitor-feedback/rate/rate-a.svg)
-
-
->>>>>>> 8eb147b (update readme)
-
-
-
 
 
 ### challenges 
