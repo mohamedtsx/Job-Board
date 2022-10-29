@@ -7,6 +7,6 @@
 ### challenges 
 - [ ] find safe alternative to dangerouslySetInnerHTML
 
-#### I'm working on
+### working on
 - making job page more responsive
 
