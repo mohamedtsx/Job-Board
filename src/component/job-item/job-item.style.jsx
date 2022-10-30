@@ -100,7 +100,8 @@ export const Actions = styled.div`
     }
 
     .action-buttons {
-        width: 18.1rem;
+        ${'' /* width: 18.1rem; */}
+        width: fit-content;
         display: flex;
         justify-content: flex-end;
         gap: 1rem;

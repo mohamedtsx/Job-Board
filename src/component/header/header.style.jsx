@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import Banner from '../../assets/banner.svg';
 
-const width = window.innerHeight < 1000;
-// const width = false;
+const width = window.innerHeight < 1024;
 
 
 export const HeaderSt = styled.div`

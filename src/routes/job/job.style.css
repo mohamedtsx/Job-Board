@@ -47,12 +47,29 @@
     background-color: red;
     background-color: #fff;
     margin-bottom: 2.8rem;
+    padding: 4rem 3rem;
+}
+
+.job_description h1{
+    color: #212121;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+
+}
+
+.job_description p {
+    color: #777;
+    line-height: 2.4rem;
+    margin-bottom: 2rem;
 }
 
 .job_apply {
     padding: 3.4rem 3rem;
     background-color: #fff;
     grid-column: span 2;
+    margin-bottom: 5rem;
+
 }
 
 .job_apply h1 {
@@ -63,6 +80,7 @@
 
 .job_apply span {
     color: #212121;
+    line-height: 2;
 }
 
 .job_apply span a {
@@ -73,7 +91,6 @@
 
 
 .job_summary {
-    /* width: 44.3rem; */
     height: 35.2rem;
     min-width: 17.3rem;
     text-transform: capitalize;
@@ -123,5 +140,60 @@
     font-size: 1.6rem;
 }
 
+@media screen and (max-width: 1011px){
+    .job-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .job_summary {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 625px){
+    .job-header_text h1{
+        font-size: 4.8rem;
+    }
+    
+    .job-header_text h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 540px){
+    .job-header {
+        padding: 0 5vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .job-header_text h1{
+        font-size: 4.2rem;
+    }
+    
+    .job-header_text h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 418px) {
+    .job-header_text h1{
+        font-size: 3.4rem;
+    }
+
+    .job-header {
+        height: 40rem;
+    }
+}
 
 
+@media screen and (max-width: 340px) {
+    .job-header_text h1{
+        font-size: 3.2rem;
+    }
+
+    .job-header {
+        height: 30rem;
+    }
+}

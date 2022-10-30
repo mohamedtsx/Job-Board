@@ -1,4 +1,5 @@
 import './job.style.css';
+import React from 'react';
 
 // ----------------------
 import { Info } from '../../component/job-item/job-item.style';
@@ -9,12 +10,16 @@ import { useContext } from 'react';
 import { JobContext } from '../../context/jobs.context';
 import { useParams } from 'react-router-dom';
 
+// import { parse } from 'dom-parser-react';
+
 
 const Job = () => {
+
+
     const {jobs} = useContext(JobContext);
+
     let { id } = useParams();
     id =  Number(id);
-
     const job = jobs.find(el => el.id === id);
     if(!job) {return;}
 
@@ -26,6 +31,12 @@ const Job = () => {
     } = job;
     type = type === 1 ? 'full time' : 'part time';
     created_at = new Date(`${created_at}`).toLocaleDateString();
+
+    // const content = parse(description,{
+    //     createElement:  React.createElement,
+    //     Fragment: React.Fragment
+    // });
+
 
 
     return(
@@ -55,7 +66,7 @@ const Job = () => {
                             </JobItemSt>
                         </section>
                         <section className='job_description'>
-                            {/* {description} */}
+                            <div dangerouslySetInnerHTML={{__html: description}}/>
                         </section>
                     </div>
 
