@@ -12,7 +12,6 @@
 description ....
 
 --------------------
-<<<<<<< HEAD
 
 ## monitor feedback
 ![clean-code](/relative/responsive-9-_-10.svg)
