@@ -9,19 +9,33 @@
 --------------------
 
 # GDSC Job Board Landing Page
-project description ....
+description ....
 
 --------------------
+<<<<<<< HEAD
 
 ## monitor feedback
 <!-- ![image](https://drive.google.com/file/d/10esUV0hQYnlW7TLIhVgKUbtZkyVqLXW5/preview) -->
+=======
+![clean-code](/relative/responsive-9-_-10.svg)
+![clean-code](/relative/clean-code-10-_-8.svg)
+![clean-code](/relative/rate-a.svg)
+>>>>>>> ed6e0a6 (update readme)
 
 
 ### challenges 
 - [ ] find safe alternative to dangerouslySetInnerHTML
+<<<<<<< HEAD
 - [ ] write a project description (it taks a lot 😐) 
+=======
+- [ ] write a project description (it takes a lot 😂)
+>>>>>>> ed6e0a6 (update readme)
 
 ### working on
 - making job page more responsive
 
 > project incomplete
+<<<<<<< HEAD
+=======
+
+>>>>>>> ed6e0a6 (update readme)
