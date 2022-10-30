@@ -20,11 +20,9 @@ description ....
 
 --------------------
 
-### challenges 
+## challenges 
 - [ ] find safe alternative to dangerouslySetInnerHTML
 - [ ] write a project description (it takes a lot 😂)
 
-### working on
-- making job page more responsive
 
 > project incomplete
