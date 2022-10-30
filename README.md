@@ -26,7 +26,7 @@ Monitor Feedback ...
 - [ ] write a project description (it takes a lot 😂)
 
 
-> 🔴 project incomplete
+🔴 project incomplete
 
 
 
