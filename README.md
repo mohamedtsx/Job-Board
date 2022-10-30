@@ -26,8 +26,8 @@ Monitor Feedback ...
 - [ ] write a project description (it takes a lot 😂)
 
 
-<!-- > <span style="color: red;">project incomplete</span> -->
-<!-- <span style="color: red;">text</span> -->
+> 🔴 project incomplete
+
 
 
 <span color="red">hello</span>
