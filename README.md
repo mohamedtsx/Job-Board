@@ -29,7 +29,5 @@ Monitor Feedback ...
 <!-- > <span style="color: red;">project incomplete</span> -->
 <!-- <span style="color: red;">text</span> -->
 
-<pre>
+
 <span color="red">hello</span>
-  world
-</pre>
