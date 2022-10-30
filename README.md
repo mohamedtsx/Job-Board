@@ -12,13 +12,16 @@
 description ....
 
 --------------------
-Monitor Feedback ...
-<!--
-![monitor-feedback](/relative/monitor-feedback.svg)
-![responsive-design](/relative/responsive-9-_-10.svg)
-![clean-code](/relative/clean-code-8-_-10.svg)
-![final-rate](/relative/rate-a.svg)
--->
+## Monitor Feedback
+<details>
+    <summary>Phase one</summary>
+    ![responsive-design](/relative/responsive-9-_-10.svg)
+    ![clean-code](/relative/clean-code-8-_-10.svg)
+    ![final-rate](/relative/rate-a.svg)
+</details>
+
+<!-- ![monitor-feedback](/relative/monitor-feedback.svg) -->
+
 --------------------
 
 ## challenges 
@@ -27,8 +30,4 @@ Monitor Feedback ...
 
 
 🔴  project incomplete
-
-<details>
-    <summary>Toggle Switch</summary>
-    Foldable Content[enter image description here][1]
-</details>
+🔴  feedback doesn't ready yet
