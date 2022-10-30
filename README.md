@@ -20,14 +20,13 @@ description ....
     <img src="relative/rate-a.svg"/>
 </details>
 
-<!-- ![monitor-feedback](/relative/monitor-feedback.svg) -->
-
 --------------------
 
 ## challenges 
 - [ ] find safe alternative to dangerouslySetInnerHTML
 - [ ] write a project description (it takes a lot 😂)
 
+--------------------
 
 🔴  project incomplete
 🔴  feedback doesn't ready yet
