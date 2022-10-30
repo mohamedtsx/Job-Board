@@ -16,9 +16,8 @@ description ....
 <details>
     <summary>Phase one</summary>
     <img src="/relative/responsive-9-_-10.svg"></img>
-<!--     ![responsive-design](/relative/responsive-9-_-10.svg) -->
-<!--     ![clean-code](/relative/clean-code-8-_-10.svg) -->
-<!--     ![final-rate](/relative/rate-a.svg) -->
+    <img src="/relative/clean-code-8-_-10.svg"></img>
+    <img src="/relative//relative/rate-a.svg"></img>
 </details>
 
 <!-- ![monitor-feedback](/relative/monitor-feedback.svg) -->
