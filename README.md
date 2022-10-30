@@ -15,8 +15,8 @@ description ....
 ## Monitor Feedback
 <details>
     <summary>Phase one</summary>
-    <img src="/relative/responsive-design-8_-10.svg"/>
-    <img src="/relative/clean-code-8-_-10.svg"/>
+    <img src="relative/responsive-design-8-_-10.svg"/>
+    <img src="relative/clean-code-8-_-10.svg"/>
     <img src="relative/rate-a.svg"/>
 </details>
 
