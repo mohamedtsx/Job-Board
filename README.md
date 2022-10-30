@@ -22,17 +22,9 @@ description ....
 
 ### challenges 
 - [ ] find safe alternative to dangerouslySetInnerHTML
-<<<<<<< HEAD
-- [ ] write a project description (it taks a lot 😐) 
-=======
 - [ ] write a project description (it takes a lot 😂)
->>>>>>> ed6e0a6 (update readme)
 
 ### working on
 - making job page more responsive
 
 > project incomplete
-<<<<<<< HEAD
-=======
-
->>>>>>> ed6e0a6 (update readme)
