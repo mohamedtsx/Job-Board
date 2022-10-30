@@ -30,4 +30,4 @@ description ....
 
 🔴  project incomplete &emsp;
 🔴  feedback doesn't ready yet &emsp;
-🟢  [live demo](https://gdsc-job-board.netlify.app/) &emsp;
+🟢  [live demo](https://gdsc-job-board.netlify.app) &emsp;
