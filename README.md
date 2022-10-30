@@ -14,9 +14,9 @@ description ....
 --------------------
 
 ## monitor feedback
-![clean-code](/relative/responsive-9-_-10.svg)
-![clean-code](/relative/clean-code-10-_-8.svg)
-![clean-code](/relative/rate-a.svg)
+![responsive-design](/relative/responsive-9-_-10.svg)
+![clean-code](/relative/clean-code-8-_-10.svg)
+![final-rate](/relative/rate-a.svg)
 
 
 
