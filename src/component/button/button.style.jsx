@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const baseBtn = styled.button`
     height: 5.1rem;
     padding: 1.6rem 2.5rem;
@@ -15,25 +16,30 @@ export const baseBtn = styled.button`
 `
 
 export const addToFavoritesBtn = styled.button`
-    border: none;
     width: 4.2rem;
     height: 4.2rem;
+    border: none;
     background-color: #EFFDF5;
     cursor: pointer;
+
+    @media screen and (max-width: 560px) {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 0.2rem;
+    }
 `
 
 export const removeJobBtn = styled.button`
-    background-color: blue;
     
 `
 
 export const baseMiniBtn = styled.button`
     height: 4.2rem;
-    overflow:hidden;
     padding: 0 2.5rem;
+    overflow:hidden;
 
-    weight: 700;
     font-size: 1.4rem;
+    font-weight: 700;
     border: none;
 
     color: #fff;
@@ -42,6 +48,13 @@ export const baseMiniBtn = styled.button`
     border-radius: 0.4rem;
     background-color: #00D363;
     cursor: pointer;
+
+    @media screen and (max-width: 560px) {
+        height: 3.2rem;
+        padding: 0 1rem;
+        font-weight: 500;
+        border-radius: 0.2rem;
+    }
 `
 
 export const dropdownToggleBtn = styled.button`

@@ -32,10 +32,10 @@ const reduceText = (children) => {
 const Button = ({children, buttonType, ...otherProps}) => {
     const CustomButton = getButton(buttonType);
     const width = window.innerWidth;
-    const isMobile = width <= 574 && (width > 560|| width <390);
+    const isMobile = width <= 574 && (width > 560|| width <435);
 
     return(
-        <CustomButton {...otherProps}>
+        <CustomButton type="button" {...otherProps}>
             {isMobile ? reduceText(children) : children}
         </CustomButton>
     )

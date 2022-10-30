@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+const ipad = window.innerHeight > 1000;
+
+
 export const JobItemSt = styled.div`
     border-reduce: 0.4rem;
     margin: 1.2rem auto;
@@ -11,6 +14,7 @@ export const JobItemSt = styled.div`
     align-items: center;
     padding: 2.1vw 2.3vw;
     overflow: hidden;
+
 
     @media screen and (max-width: 560px) {
         flex-direction: column-reverse;
@@ -24,7 +28,6 @@ export const Info = styled.div`
     gap: 2rem;
     align-items: center;
     padding-right: 1rem;
-
 
     h1 {
         font-size: 2.4rem;
@@ -58,6 +61,25 @@ export const Info = styled.div`
             height: 6.5rem;
         }
     }
+
+    @media screen and (max-width: 400px) {
+        gap: 1rem;
+
+        h1 {
+            font-size: 1.6rem;
+        }
+
+        .highlights {
+            font-size: 1.4rem;
+            margin: 1rem 3rem 0.5rem 0;
+        }
+
+        img {
+            width: 5.5rem;
+            height: 5.5rem;
+        }
+        
+    }
 `
 
 export const Actions = styled.div`
@@ -77,19 +99,29 @@ export const Actions = styled.div`
         color: #777;
     }
 
+    .action-buttons {
+        width: 18.1rem;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
     @media screen and (max-width: 560px) {
         width: 100%;
         height: auto;
         padding-bottom: 0.6rem;
+
         span {
             grid-row-start: 1;
             grid-column-end: 1;
             justify-self: start;
         }
     }
-`
 
-// export const 
+    @media screen and (max-width: 400px) {
+        padding-bottom: 0;
+    }
+`
 
 /* {
     "company_email": "test@test.com",

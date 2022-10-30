@@ -31,8 +31,10 @@ const JobItem = ({item}) => {
                 </div>
             </Info>
             <Actions>
-                <Button buttonType={BUTTON_TYPES.addToFavorites}><Favorites/></Button>
-                <Button buttonType={BUTTON_TYPES.baseMini}>apply now</Button>
+                <div className='action-buttons'>
+                    <Button buttonType={BUTTON_TYPES.addToFavorites}><Favorites/></Button>
+                    <Button buttonType={BUTTON_TYPES.baseMini}>apply now</Button>
+                </div>
                 <span>published: {jobDate}</span>
             </Actions>
         </JobItemSt>

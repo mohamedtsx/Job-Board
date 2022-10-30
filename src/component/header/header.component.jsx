@@ -1,20 +1,22 @@
-import './header.style.css';
+import { 
+    HeaderSt, Hero, HeroImage, HeroText
+} from './header.style.jsx';
+
 import Illustration  from '../../assets/hero-illustration.png';
 import Button from '../button/button.component';
 
 import { useContext } from 'react';
 import { JobContext } from '../../context/jobs.context';
 
-import { Link } from 'react-router-dom';
 
 const Header = () => {
 
     const {jobs} = useContext(JobContext);
 
     return(
-        <header className='home-header'>
-            <section className='hero'>
-                <div className='hero_text'>
+        <HeaderSt>
+            <Hero>
+                <HeroText>
                     <h4>{jobs.length}+ job listed</h4>
                     
                     <h1>Find your dream job</h1>
@@ -24,10 +26,10 @@ const Header = () => {
                     <a href='#list'>
                         <Button>start applying now</Button>
                     </a>
-                </div>
-                <img className='hero-image' src={Illustration} alt='hero'/>
-            </section>
-        </header>
+                </HeroText>
+                <HeroImage src={Illustration} alt='hero'/>
+            </Hero>
+        </HeaderSt>
     )
 }
 
