@@ -24,7 +24,7 @@ description ....
 
 ## Challenges 
 - [ ] find safe alternative to dangerouslySetInnerHTML
-- [ ] write a project description (it takes a lot 😂)
+
 
 --------------------
 
