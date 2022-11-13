@@ -9,6 +9,7 @@ import { JobItemSt } from '../../component/job-item/job-item.style';
 import { useContext } from 'react';
 import { JobContext } from '../../context/jobs.context';
 import { useParams } from 'react-router-dom';
+import NotFound from '../not-found/not-found.component';
 
 // import { parse } from 'dom-parser-react';
 
@@ -19,9 +20,13 @@ const Job = () => {
     const {jobs} = useContext(JobContext);
 
     let { id } = useParams();
-    id =  Number(id);
-    const job = jobs.find(el => el.id === id);
-    if(!job) {return;}
+    
+    const job = jobs.find(el => el.id === +id);
+    
+    if(!job) {
+        return <NotFound/>;
+    }
+
 
     let {
         company_email,company_logo,

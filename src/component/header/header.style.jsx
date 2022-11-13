@@ -1,10 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Banner from '../../assets/banner.svg';
 
 const width = window.innerHeight < 1024;
 
 
-export const HeaderSt = styled.div`
+
+export const HeadSectionSt = styled.section`
     width: 100%;
     padding: 0 5vw;
     min-height: 100vh;
@@ -16,7 +17,6 @@ export const HeaderSt = styled.div`
     display: flex;
     justify-content: center;
     position: relative;
-
 `
 
 export const Hero = styled.div `
@@ -25,7 +25,7 @@ export const Hero = styled.div `
     margin-top: 15.8rem;    
     display: flex;
 
-    @media screen and (max-width: 1300px) {
+    ${'' /* @media screen and (max-width: 1300px) {
         display: grid;
         row-gap: 5rem;
         margin-top: 10rem;
@@ -47,7 +47,7 @@ export const Hero = styled.div `
         -ms-transform: translate(-3rem);
         -o-transform: translate(-3rem);
         transform: translate(-3rem);
-    }
+    } */}
 
 `
 
@@ -56,7 +56,7 @@ export const HeroImage = width ? styled.img`
     height: auto;
 
 
-    @media screen and (max-width: 1300px) {
+    ${'' /* @media screen and (max-width: 1300px) {
         width: 30rem;
         justify-self: end;
         -webkit-transform: translate(0, -5rem);
@@ -68,7 +68,7 @@ export const HeroImage = width ? styled.img`
 
     @media screen and (max-width: 570px) {
       transform: translate(0, 4rem);
-    }
+    } */}
 
 `: styled.img`
     width: 90%;
@@ -83,6 +83,7 @@ export const HeroText = styled.div`
     height: 24.5rem;
     color: #fff;
     transform: translate(3rem,6.7rem);
+    
 
     h1 {
         font-weight: 600;
@@ -102,6 +103,9 @@ export const HeroText = styled.div`
         margin-bottom: 4.1rem;    
     }
 
+
+
+${'' /* 
     @media screen and (max-width: 750px) {
         width: 100%;
         
@@ -137,5 +141,6 @@ export const HeroText = styled.div`
         p {
             font-size: 1.4rem;
         }
-    }
+    } */}
 `
+

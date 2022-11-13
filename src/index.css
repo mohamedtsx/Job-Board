@@ -8,14 +8,25 @@ html {
     height: 100%;
     font-size: 62.5%;
     color: initial;
+
     scroll-behavior: smooth;
 }
 
 body {
     min-height: 100vh;
     width: 100%;
-    /* overflow-x: hidden; */
     font-family: 'Inter', sans-serif;
     font-size: 1.6rem;
+    text-overflow: ellipsis;
     position: relative;
+
+}
+
+
+button a {
+    text-decoration: none;
+    font: inherit;
+    color: inherit;
+    width: 100%;
+    height: 100%;
 }

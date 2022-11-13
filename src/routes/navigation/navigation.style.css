@@ -11,7 +11,7 @@ nav {
     position: absolute;
     top: 1rem;
     left: 50%;
-    z-index: 99;
+    z-index: 10;
     -webkit-transform: translate(-50%,0);
     -moz-transform: translate(-50%,0);
     -ms-transform: translate(-50%,0);
@@ -38,14 +38,15 @@ nav {
     height: 6rem;
  }
 
-.sign-in {
+.login {
     font-size: 1.8rem;
     font-weight: 600;
     text-transform: capitalize;
     color: #fff;
-    text-decoration: none;
+    cursor: pointer;
 }
 
+/* 
 @media screen and (max-width: 500px){
     .nav-logo {
         width: 15rem;
@@ -74,4 +75,4 @@ nav {
         background-color: gray;
     }
 
-}
+} */

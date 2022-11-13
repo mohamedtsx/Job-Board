@@ -13,6 +13,17 @@ export const baseBtn = styled.button`
     border-radius: 0.4rem;
     background-color: #00D363;
     cursor: pointer;
+
+    transition: background-color 250ms;
+
+    :hover {
+        background-color: rgb(12, 170, 65);
+    }
+
+    a {
+        padding: 1.6rem 2.5rem;
+ 
+    }
 `
 
 export const addToFavoritesBtn = styled.button`
@@ -21,12 +32,19 @@ export const addToFavoritesBtn = styled.button`
     border: none;
     background-color: #EFFDF5;
     cursor: pointer;
+    border-radius: 0.4rem;
+    transition: box-shadow 200ms;
 
-    @media screen and (max-width: 560px) {
+    :hover {
+        box-shadow: 0 1px 2px 0 rgb(255 0 0 / 40%); 
+    }
+
+
+    ${'' /* @media screen and (max-width: 560px) {
         width: 3.2rem;
         height: 3.2rem;
         border-radius: 0.2rem;
-    }
+    } */}
 `
 
 export const removeJobBtn = styled.button`
@@ -49,12 +67,18 @@ export const baseMiniBtn = styled.button`
     background-color: #00D363;
     cursor: pointer;
 
-    @media screen and (max-width: 560px) {
+    transition: background-color 250ms;
+
+    :hover {
+        background-color: rgb(12, 170, 65);
+    }
+
+    ${'' /* @media screen and (max-width: 560px) {
         height: 3.2rem;
         padding: 0 1rem;
         font-weight: 500;
         border-radius: 0.2rem;
-    }
+    } */}
 `
 
 export const dropdownToggleBtn = styled.button`
@@ -95,8 +119,8 @@ export const dropdownToggleBtn = styled.button`
         transform: translateY(0) rotate(315deg);
         transition-delay: 250ms;
     }
-
+${'' /* 
     @media screen and (max-width: 500px) {
         display: block;
-    }
+    } */}
 `

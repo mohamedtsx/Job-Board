@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 import { JobContextProvider } from './context/jobs.context';
 import { BrowserRouter } from 'react-router-dom';
+import { LoginContextProvider } from './context/login.context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -13,7 +14,9 @@ root.render(
   <React.StrictMode>
   <BrowserRouter>
       <JobContextProvider>
-        <App />
+        <LoginContextProvider>
+          <App />
+        </LoginContextProvider>
       </JobContextProvider>
   </BrowserRouter>
   </React.StrictMode>
