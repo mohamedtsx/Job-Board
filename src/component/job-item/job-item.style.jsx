@@ -11,15 +11,29 @@ export const JobItemSt = styled.div`
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
     padding: 2.1vw 2.3vw;
     overflow: hidden;
 
+    transition: box-shadow 240ms cubic-bezier(0.2,0,0.38,0.9);
+
+    :hover {
+        box-shadow: 0px 8px 10px rgb(0 118 221 / 30%);        
+    }
+
+    @media screen and (max-width: 37.5em) {
+        flex-direction: column;
+        justify-content: stretch;
+
+    }
+
+
+${'' /* 
 
     @media screen and (max-width: 560px) {
         flex-direction: column-reverse;
         align-items: stretch;
-    }
+    } */}
 `
 
 export const Info = styled.div`
@@ -44,6 +58,16 @@ export const Info = styled.div`
         width: 100%;
     }
 
+    .job-title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .favoriteLeft {
+        display: none;
+    }
+
     .highlights {
         max-width: 32rem;
         margin: 1.2rem 1rem 1.2rem 0;
@@ -52,7 +76,15 @@ export const Info = styled.div`
         justify-content: space-between;
     }
 
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 37.5em) {
+        width: 100%;
+
+        .favoriteLeft {
+            display: block;
+        }
+    }
+
+    ${'' /* @media screen and (max-width: 560px) {
         h1 {
             font-size: 1.8rem;
         }
@@ -60,8 +92,8 @@ export const Info = styled.div`
             width: 6.5rem;
             height: 6.5rem;
         }
-    }
-
+    } */}
+${'' /* 
     @media screen and (max-width: 400px) {
         gap: 1rem;
 
@@ -79,19 +111,18 @@ export const Info = styled.div`
             height: 5.5rem;
         }
         
-    }
+    } */}
 `
 
 export const Actions = styled.div`
     font-size: 1.4rem;
-    width: 18.1rem;
+    width: 17.5rem;
     height: 7.7rem;
-    border: 0.1rem solid #EFFDF5;
 
-    display: grid;
-    grid-template-columns: repeat(2,auto);
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-content: space-between;
+
 
     span {
         grid-column: span 2;
@@ -100,14 +131,33 @@ export const Actions = styled.div`
     }
 
     .action-buttons {
-        ${'' /* width: 18.1rem; */}
-        width: fit-content;
+        width: 100%;
         display: flex;
-        justify-content: flex-end;
-        gap: 1rem;
+        justify-content: space-between;
+        align-item: center;
     }
 
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 37.5em) {
+        width: 100%;
+        height: fit-content;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-end;
+
+
+        .action-buttons {
+            width: auto; 
+            height: auto;
+        }
+
+        .favoriteRight {
+            display: none;
+        }
+
+    }
+
+
+    ${'' /* @media screen and (max-width: 560px) {
         width: 100%;
         height: auto;
         padding-bottom: 0.6rem;
@@ -121,7 +171,7 @@ export const Actions = styled.div`
 
     @media screen and (max-width: 400px) {
         padding-bottom: 0;
-    }
+    } */}
 `
 
 /* {
@@ -137,3 +187,5 @@ export const Actions = styled.div`
     "type": 1,
     "vacancy": 3
 } */
+
+

@@ -1,11 +1,17 @@
 import './home.style.css'
-import Header from '../../component/header/header.component';
+import HeadSection from '../../component/header/header.component';
 import Jobs from '../../component/jobs/jobs.component';
 const Home = () => {
-    return <div>
-        <Header/>
-        <Jobs/>
-    </div>
+    return(
+        <div className='home'>
+            <div className='open'>
+                <div className='layer'/>
+                <div className='layer'/>
+            </div>
+            <HeadSection/>
+            <Jobs/>
+        </div>
+    )
 }
 
 export default Home;

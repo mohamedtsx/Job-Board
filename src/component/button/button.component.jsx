@@ -23,21 +23,14 @@ const getButton = (buttonType = BUTTON_TYPES.base) => ({
 }[buttonType]);
 
 
-const reduceText = (children) => {
-    const isApply = typeof children === 'string' && children.includes('apply');
-    return isApply ? children.toLocaleLowerCase().replace(' now', '') : children;
-}
-
 
 const Button = ({children, buttonType, ...otherProps}) => {
     const CustomButton = getButton(buttonType);
-    const width = window.innerWidth;
-    const isMobile = width <= 574 && (width > 560|| width <435);
 
+    const type = otherProps.type || 'button';
+    
     return(
-        <CustomButton type="button" {...otherProps}>
-            {isMobile ? reduceText(children) : children}
-        </CustomButton>
+        <CustomButton type={type} {...otherProps}>{children}</CustomButton>
     )
 }
 
