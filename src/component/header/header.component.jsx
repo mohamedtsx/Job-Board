@@ -13,13 +13,13 @@ import { JobContext } from '../../context/jobs.context';
 
 const HeadSection = () => {
 
-    const {jobs} = useContext(JobContext);
+    const { total} = useContext(JobContext);
 
     return(
         <HeadSectionSt>
             <Hero>
                 <HeroText className='hero-text'>
-                    <h4>{jobs.length}+ job listed</h4>
+                    <h4>{total}+ job listed</h4>
                     
                     <h1>Find your dream job</h1>
                     <p>

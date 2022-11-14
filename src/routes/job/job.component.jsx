@@ -1,30 +1,40 @@
 import './job.style.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 // ----------------------
 import { Info } from '../../component/job-item/job-item.style';
 import { JobItemSt } from '../../component/job-item/job-item.style';
 // ----------------------
 
-import { useContext } from 'react';
-import { JobContext } from '../../context/jobs.context';
+// import { useContext } from 'react';
+// import { JobContext } from '../../context/jobs.context';
 import { useParams } from 'react-router-dom';
-import NotFound from '../not-found/not-found.component';
 
 // import { parse } from 'dom-parser-react';
 
+import { getJob } from '../../api/get-endpoint.api';
+
 
 const Job = () => {
-
-
-    const {jobs} = useContext(JobContext);
-
-    let { id } = useParams();
+    const { id } = useParams();
+    const [job, setJob] = useState()
     
-    const job = jobs.find(el => el.id === +id);
+    // why to get a job from an end point during we have all the jobs ?
+    // const { jobs } = useContext(JobContext);
+    // const job = jobs.find((el) => el.id === +id);
+
+
+    useEffect(() => {
+        const asyncFn = async () => {    
+            const { data } = await getJob(+id);
+            setJob(data.data);
+        }
+        asyncFn();
+    }, []);
     
+        
     if(!job) {
-        return <NotFound/>;
+        return <section className='waiting'/>
     }
 
 
@@ -36,12 +46,6 @@ const Job = () => {
     } = job;
     type = type === 1 ? 'full time' : 'part time';
     created_at = new Date(`${created_at}`).toLocaleDateString();
-
-    // const content = parse(description,{
-    //     createElement:  React.createElement,
-    //     Fragment: React.Fragment
-    // });
-
 
 
     return(
