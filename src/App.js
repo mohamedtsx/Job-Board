@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='post-job' element={<PostJob/>}/>s
-        <Route path='job-:id' element={<Job/>}/>
+        <Route path='job/:id' element={<Job/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
       

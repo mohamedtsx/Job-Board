@@ -17,6 +17,8 @@ export const HeadSectionSt = styled.section`
     display: flex;
     justify-content: center;
     position: relative;
+
+    z-index: 5;
 `
 
 export const Hero = styled.div `

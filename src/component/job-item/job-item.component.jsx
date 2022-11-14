@@ -20,7 +20,7 @@ const JobItem = ({item}) => {
     const navigate = useNavigate();
 
     const goToJob = () => {
-        navigate(`/job-${id}`);
+        navigate(`/job/${id}`);
     }
 
  
