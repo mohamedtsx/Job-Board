@@ -19,11 +19,6 @@ export const baseBtn = styled.button`
     :hover {
         background-color: rgb(12, 170, 65);
     }
-
-    a {
-        padding: 1.6rem 2.5rem;
- 
-    }
 `
 
 export const addToFavoritesBtn = styled.button`
@@ -40,11 +35,11 @@ export const addToFavoritesBtn = styled.button`
     }
 
 
-    ${'' /* @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px) {
         width: 3.2rem;
         height: 3.2rem;
         border-radius: 0.2rem;
-    } */}
+    }
 `
 
 export const removeJobBtn = styled.button`
@@ -73,17 +68,17 @@ export const baseMiniBtn = styled.button`
         background-color: rgb(12, 170, 65);
     }
 
-    ${'' /* @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px) {
         height: 3.2rem;
         padding: 0 1rem;
         font-weight: 500;
         border-radius: 0.2rem;
-    } */}
+    }
 `
 
 export const dropdownToggleBtn = styled.button`
-    width: 4rem;
-    height: 4.2rem;
+    width: 40px;
+    height: 42px;
     background: transparent;
     border: none;
     outline: none;
@@ -94,22 +89,22 @@ export const dropdownToggleBtn = styled.button`
 
     span {
         display: block;
-        width: 3rem;
-        height: 0.3rem;
+        width: 30px;
+        height: 3px;
         background-color: #00D363;
         position: absolute;
         transition: all 500ms;
     }
 
     .top {
-        transform: translateY(-0.8rem);
+        transform: translateY(-8px);
     }
     .bottom {
-        transform: translateY(0.8rem);
+        transform: translateY(8px);
     }
 
     &.active .mid{
-        transform: translateX(4rem);
+        transform: translateX(40px);
     }
     &.active .top{
         transform: translateY(0) rotate(45deg);
@@ -119,8 +114,8 @@ export const dropdownToggleBtn = styled.button`
         transform: translateY(0) rotate(315deg);
         transition-delay: 250ms;
     }
-${'' /* 
-    @media screen and (max-width: 500px) {
-        display: block;
-    } */}
+
+    @media screen and (max-width: 510px) {
+        display: inline-block;
+    }
 `

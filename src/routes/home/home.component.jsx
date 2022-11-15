@@ -1,5 +1,5 @@
 // import './home.style.css'
-import HeadSection from '../../component/header/header.component';
+import HeroSection from '../../component/hero/hero.component';
 import Jobs from '../../component/jobs/jobs.component';
 const Home = () => {
     return(
@@ -8,7 +8,7 @@ const Home = () => {
                 <div className='layer'/>
                 <div className='layer'/>
             </div>
-            <HeadSection/>
+            <HeroSection/>
             <Jobs/>
         </div>
     )
