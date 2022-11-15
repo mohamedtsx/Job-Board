@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
 
+    background-color: #0076dd;
     background-image: url('../../assets/banner-short.png');
 }
 
@@ -146,7 +147,7 @@
     color: #777;
     font-size: 1.6rem;
 }
-/* 
+
 @media screen and (max-width: 1011px){
     .job-container {
         padding-left: 2rem;
@@ -203,4 +204,4 @@
     .job-header {
         height: 30rem;
     }
-} */
+}

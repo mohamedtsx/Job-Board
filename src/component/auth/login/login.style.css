@@ -48,19 +48,24 @@
     width: 5rem;
     height: 5rem;
     color: #fff;
-
     background-color: #00D363;
-
     position: absolute;
     top: -2.5rem;
     right: -2.5rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     border-radius: 50%;
     cursor: pointer;
+    -webkit-transition: background-color 200ms;
+    -moz-transition: background-color 200ms;
+    -ms-transition: background-color 200ms;
+    -o-transition: background-color 200ms;
+    transition: background-color 200ms;
+}
+
+.close-login:hover {
+    background-color: #056b27;
 }
 
 .heading {
@@ -173,6 +178,41 @@ label {
     margin-bottom: 0.8rem;
 }
 .reset-password {
-
     color: #1861bf;
+}
+
+@media screen and (max-width: 35.625em){
+    .login-submit, 
+    .potentials-btn {
+        border: none;
+    }
+    
+    .login-submit:hover {
+        background-color: #056b27;
+        color: #fff;
+    }
+
+    .potentials-btn:hover {
+        background-color: #6c757dd4;
+        color: #fff;
+    }
+
+    .login-form {
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    
+ 
+    .close-login {
+        color: #056b27;
+        background-color: transparent;
+        top: 2rem;
+        right: 2rem;    
+        border-radius: 50%;
+    }
+
+    .close-login:hover {
+        background-color: #ddefd6;
+    }
 }

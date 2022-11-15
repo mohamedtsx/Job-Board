@@ -3,7 +3,7 @@ import { useRef } from 'react';
 
 import { useContext } from 'react';
 import { LoginContext } from '../../../context/login.context';
-
+import Close from '../../../assets/buttons/x.svg';
 
 const Login = () => {
     const { loginActive, setLoginActive } = useContext(LoginContext)
@@ -17,14 +17,15 @@ const Login = () => {
 
     const loginHandler = (e) => {
         e.preventDefault();
-
-
+        alert("in develope")
     }
 
     return(
         <div className={`login-container ${loginActive ? 'active': ''}`}>
             <div className='login-form'>
-                <div className='close-login' onClick={activeHandler}>X</div>
+                <div className='close-login' onClick={activeHandler}>
+                    <img src={Close} alt='close form icon'/>
+                </div>
                 <section className='heading'>
                     <h3>Login to your account</h3>
                     <p>Don't have an account ? <a className='sign-in' href='#sign-in'>Sign up!</a></p>

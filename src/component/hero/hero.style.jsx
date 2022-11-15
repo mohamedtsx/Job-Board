@@ -1,8 +1,5 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import Banner from '../../assets/banner.svg';
-
-const width = window.innerHeight < 1024;
-
 
 
 export const HeadSectionSt = styled.section`
@@ -11,6 +8,8 @@ export const HeadSectionSt = styled.section`
     min-height: 100vh;
 
     overflow: hidden;
+
+    background-color: #0076dd;
     background-image: url(${Banner});
     background-size: cover;
 
