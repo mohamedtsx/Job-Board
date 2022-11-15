@@ -22,20 +22,21 @@ nav {
 
 .nav_list {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
     overflow: hidden;
-    -webkit-transition: height 500ms;
-    -moz-transition: height 500ms;
-    -ms-transition: height 500ms;
-    -o-transition: height 500ms;
-    transition: height 500ms;
+    
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 .nav_list.active {
-    height: 6rem;
+    height: 20rem;
+    padding: 3rem;
  }
 
 .login {
@@ -46,33 +47,77 @@ nav {
     cursor: pointer;
 }
 
-/* 
-@media screen and (max-width: 500px){
+.nav_post_job {
+    padding: 1.6rem 2.5rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    border-radius: 0.4rem;
+    background-color: #00D363;
+    cursor: pointer;
+
+    -webkit-transition: background-color 250ms;
+    -moz-transition: background-color 250ms;
+    -ms-transition: background-color 250ms;
+    -o-transition: background-color 250ms;
+    transition: background-color 250ms;
+
+}
+
+.nav_post_job:hover {
+    background-color: rgb(12, 170, 65);
+}
+
+@media screen and (max-width: 510px){
     .nav-logo {
-        width: 15rem;
+        width: 20rem;
     }
 
     .nav_list {
         height: 0;
+
         position: absolute;
         top: 6rem;
         width: 90%;
+
+        flex-direction: column-reverse;
+        gap: 0.5rem;
+
+        background-color: #ddefd6;
+
+
+
+    
+        -webkit-border-radius: 0.4rem;
+        -moz-border-radius: 0.4rem;
+        -ms-border-radius: 0.4rem;
+        -o-border-radius: 0.4rem;
+        border-radius: 0.4rem;
     }
+
+    .login,
+    .nav_post_job {
+        width: 100%;
+        padding: 2rem 0;
+        text-align: center;
+        border: 1px solid gray;
+        background-color: #a2d2ff;
+        color: black;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #2d2d2d;
+    }
+
+
 }
 
+
 @media screen and (max-width: 570px){
+
     nav {
         width: 100%;
         padding: 0 2rem;
     }
 
 }
-
-@media screen and (max-width: 500px){
- 
-    .nav_list {
-        padding: 0 0.7rem;
-        background-color: gray;
-    }
-
-} */

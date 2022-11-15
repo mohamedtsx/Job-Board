@@ -53,7 +53,7 @@ const PostJob = () => {
 
 
 
-    const isLogged = true;
+    const isLogged = false;
 
     const submitHandler = (e) => {
         e.preventDefault();

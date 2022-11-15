@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-const ipad = window.innerHeight > 1000;
-
 
 export const JobItemSt = styled.div`
     border-reduce: 0.4rem;
@@ -24,16 +22,7 @@ export const JobItemSt = styled.div`
     @media screen and (max-width: 37.5em) {
         flex-direction: column;
         justify-content: stretch;
-
     }
-
-
-${'' /* 
-
-    @media screen and (max-width: 560px) {
-        flex-direction: column-reverse;
-        align-items: stretch;
-    } */}
 `
 
 export const Info = styled.div`
@@ -42,6 +31,7 @@ export const Info = styled.div`
     gap: 2rem;
     align-items: center;
     padding-right: 1rem;
+    color: #2d2d2d;
 
     h1 {
         font-size: 2.4rem;
@@ -78,40 +68,23 @@ export const Info = styled.div`
 
     @media screen and (max-width: 37.5em) {
         width: 100%;
+        gap: 1rem;
+        padding-right: 0;
 
         .favoriteLeft {
             display: block;
         }
-    }
-
-    ${'' /* @media screen and (max-width: 560px) {
-        h1 {
-            font-size: 1.8rem;
-        }
-        img {
-            width: 6.5rem;
-            height: 6.5rem;
-        }
-    } */}
-${'' /* 
-    @media screen and (max-width: 400px) {
-        gap: 1rem;
 
         h1 {
-            font-size: 1.6rem;
+            font-size: 2rem;
         }
 
         .highlights {
-            font-size: 1.4rem;
-            margin: 1rem 3rem 0.5rem 0;
+            padding-right: 5rem;
         }
 
-        img {
-            width: 5.5rem;
-            height: 5.5rem;
-        }
-        
-    } */}
+    }
+
 `
 
 export const Actions = styled.div`
@@ -144,7 +117,6 @@ export const Actions = styled.div`
         justify-content: space-between;
         align-items: flex-end;
 
-
         .action-buttons {
             width: auto; 
             height: auto;
@@ -155,23 +127,6 @@ export const Actions = styled.div`
         }
 
     }
-
-
-    ${'' /* @media screen and (max-width: 560px) {
-        width: 100%;
-        height: auto;
-        padding-bottom: 0.6rem;
-
-        span {
-            grid-row-start: 1;
-            grid-column-end: 1;
-            justify-self: start;
-        }
-    }
-
-    @media screen and (max-width: 400px) {
-        padding-bottom: 0;
-    } */}
 `
 
 /* {

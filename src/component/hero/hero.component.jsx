@@ -1,8 +1,8 @@
 import { 
     HeadSectionSt, Hero, HeroImage, HeroText
-} from './header.style.jsx';
+} from './hero.style.jsx';
 
-import './temp-style.css';
+// import './hero.animation.css';
 
 import Illustration  from '../../assets/hero-illustration.png';
 import Button from '../button/button.component';
@@ -11,15 +11,15 @@ import { useContext } from 'react';
 import { JobContext } from '../../context/jobs.context';
 
 
-const HeadSection = () => {
+const HeroSection = () => {
 
-    const { total} = useContext(JobContext);
+    const { meta} = useContext(JobContext);
 
     return(
         <HeadSectionSt>
             <Hero>
                 <HeroText className='hero-text'>
-                    <h4>{total}+ job listed</h4>
+                    <h4>{meta.total}+ job listed</h4>
                     
                     <h1>Find your dream job</h1>
                     <p>
@@ -35,4 +35,4 @@ const HeadSection = () => {
     )
 }
 
-export default HeadSection;
+export default HeroSection;

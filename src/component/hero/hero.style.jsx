@@ -19,6 +19,17 @@ export const HeadSectionSt = styled.section`
     position: relative;
 
     z-index: 5;
+
+    @media screen and (min-height: 650px) and (max-width: 730px){
+        min-height: auto;
+    }
+
+    @media screen and (min-height: 1024px) {
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
 `
 
 export const Hero = styled.div `
@@ -27,12 +38,13 @@ export const Hero = styled.div `
     margin-top: 15.8rem;    
     display: flex;
 
-    ${'' /* @media screen and (max-width: 1300px) {
-        display: grid;
-        row-gap: 5rem;
-        margin-top: 10rem;
+    @media screen and (max-width: 1300px)  {
+        flex-direction: column;
+        gap: 5rem;
         width: 90%;
     }
+
+
 
     @media screen and (max-width: 750px) {
         padding: 0;
@@ -49,18 +61,17 @@ export const Hero = styled.div `
         -ms-transform: translate(-3rem);
         -o-transform: translate(-3rem);
         transform: translate(-3rem);
-    } */}
+    }
 
 `
 
-export const HeroImage = width ? styled.img`
+export const HeroImage = styled.img`
     width: 50%;
     height: auto;
 
-
-    ${'' /* @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 1300px) {
         width: 30rem;
-        justify-self: end;
+        align-self: flex-end;
         -webkit-transform: translate(0, -5rem);
         -moz-transform: translate(0, -5rem);
         -ms-transform: translate(0, -5rem);
@@ -70,14 +81,14 @@ export const HeroImage = width ? styled.img`
 
     @media screen and (max-width: 570px) {
       transform: translate(0, 4rem);
-    } */}
+    }
 
-`: styled.img`
-    width: 90%;
-    position: absolute;
-    bottom: 20rem;
-    left: 0;
-    height: auto;
+    @media screen and (min-height: 1024px) {
+        width: 100%;
+        margin-top: 14rem;
+    }
+
+
 `
 
 export const HeroText = styled.div`
@@ -107,7 +118,6 @@ export const HeroText = styled.div`
 
 
 
-${'' /* 
     @media screen and (max-width: 750px) {
         width: 100%;
         
@@ -130,7 +140,7 @@ ${'' /*
             font-size: 2.4rem;
         }
     }
-
+    
     @media screen and (max-width: 390px) {
         h1 {
             font-size: 2.8rem;
@@ -143,6 +153,8 @@ ${'' /*
         p {
             font-size: 1.4rem;
         }
-    } */}
+    }
+
+
 `
 
