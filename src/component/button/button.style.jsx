@@ -34,12 +34,6 @@ export const addToFavoritesBtn = styled.button`
         box-shadow: 0 1px 2px 0 rgb(255 0 0 / 40%); 
     }
 
-
-    @media screen and (max-width: 560px) {
-        width: 3.2rem;
-        height: 3.2rem;
-        border-radius: 0.2rem;
-    }
 `
 
 export const removeJobBtn = styled.button`
