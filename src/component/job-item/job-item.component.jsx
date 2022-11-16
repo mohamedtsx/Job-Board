@@ -14,7 +14,6 @@ const JobItem = ({item}) => {
 
     const jobType = type === 1 ? 'full time' : 'part time';
     const jobDate = new Date(`${created_at}`).toDateString();
-    console.log(jobDate)
     
     const favoritesIconRef = useRef();
 

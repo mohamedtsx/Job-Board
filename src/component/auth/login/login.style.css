@@ -32,6 +32,8 @@
     animation-duration: 250ms;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+
+
 }
 
 
@@ -198,8 +200,10 @@ label {
     }
 
     .login-form {
-        min-width: 100%;
-        min-height: 100%;
+        /* min-width: 100%; */
+        /* min-height: 100%; */
+
+        width: 90vw;
         padding-left: 2rem;
         padding-right: 2rem;
 
