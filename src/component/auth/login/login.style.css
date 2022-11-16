@@ -200,6 +200,11 @@ label {
     .login-form {
         min-width: 100%;
         min-height: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        -webkit-user-select: none;
+        user-select: none;
     }
 
     
@@ -207,8 +212,8 @@ label {
     .close-login {
         color: #056b27;
         background-color: transparent;
-        top: 2rem;
-        right: 2rem;    
+        top: 0;
+        right: 0;    
         border-radius: 50%;
     }
 
