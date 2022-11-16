@@ -97,10 +97,6 @@ export const Info = styled.div`
     }
 
     @media screen and (max-width: 23.5em) {
-        .highlights {
-            padding-right: 0
-        }
-
         .highlights span {
             padding: 0;
         }

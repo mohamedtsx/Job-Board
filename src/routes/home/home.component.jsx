@@ -1,4 +1,4 @@
-// import './home.style.css'
+import './home.style.css'
 import HeroSection from '../../component/hero/hero.component';
 import Jobs from '../../component/jobs/jobs.component';
 const Home = () => {

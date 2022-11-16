@@ -2,7 +2,7 @@ import {
     HeadSectionSt, Hero, HeroImage, HeroText
 } from './hero.style.jsx';
 
-// import './hero.animation.css';
+import './hero.animation.css';
 
 import Illustration  from '../../assets/hero-illustration.png';
 import Button from '../button/button.component';
