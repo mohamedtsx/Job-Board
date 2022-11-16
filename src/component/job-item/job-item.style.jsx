@@ -60,10 +60,18 @@ export const Info = styled.div`
 
     .highlights {
         max-width: 32rem;
+
         margin: 1.2rem 1rem 1.2rem 0;
         color: #777; 
         display: flex;
         justify-content: space-between;
+    }
+
+    .highlights span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0 1rem;
     }
 
     @media screen and (max-width: 37.5em) {
@@ -77,12 +85,25 @@ export const Info = styled.div`
 
         h1 {
             font-size: 2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
+        .highlights {            
+            padding-right: 2rem;
+        }
+
+    }
+
+    @media screen and (max-width: 23.5em) {
         .highlights {
-            padding-right: 5rem;
+            padding-right: 0
         }
 
+        .highlights span {
+            padding: 0;
+        }
     }
 
 `
@@ -127,7 +148,10 @@ export const Actions = styled.div`
         }
 
     }
+
+
 `
+
 
 /* {
     "company_email": "test@test.com",
