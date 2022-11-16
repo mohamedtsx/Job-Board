@@ -34,11 +34,6 @@ nav {
     transition: all 0.5s;
 }
 
-.nav_list.active {
-    height: 20rem;
-    padding: 3rem;
- }
-
 .login {
     font-size: 1.8rem;
     font-weight: 600;
