@@ -5,6 +5,7 @@ import {
     signInWithEmailAndPassword,
     signInWithPopup,
     GoogleAuthProvider,
+    signInWithRedirect,
     onAuthStateChanged
 } from 'firebase/auth';
 
@@ -35,7 +36,7 @@ export const signInAuthWithEmailAndPassword = async (email, password) => {
 }
 
 export const signInAuthWithGoogle = async () => {
-    return await signInWithPopup(auth, googleAuthProvider);
+    return await signInWithRedirect(auth, googleAuthProvider);
 }
 
 export const onAuthChange = (callback) => {
