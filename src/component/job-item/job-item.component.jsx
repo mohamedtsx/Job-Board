@@ -13,7 +13,8 @@ const JobItem = ({item}) => {
     } = item;
 
     const jobType = type === 1 ? 'full time' : 'part time';
-    const jobDate = new Date(`${created_at}`).toLocaleDateString();
+    const jobDate = new Date(`${created_at}`).toDateString();
+    console.log(jobDate)
     
     const favoritesIconRef = useRef();
 
@@ -39,7 +40,6 @@ const JobItem = ({item}) => {
                         <span>{jobType}</span>
                     </div>
                 </div>
-
             </Info>
             <Actions>
                 <div className='action-buttons'>
