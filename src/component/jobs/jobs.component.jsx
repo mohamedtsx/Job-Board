@@ -32,7 +32,7 @@ const Jobs = () => {
             <h2>jobs listing</h2>
             
             {
-                !!jobs ? <Loading/> : jobs.map(job => (<JobItem key={job.id} item={job}/>))
+                !jobs ? <Loading/> : jobs.map(job => (<JobItem key={job.id} item={job}/>))
             }
             
             <div className='pagination'>
