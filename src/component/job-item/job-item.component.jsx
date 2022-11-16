@@ -45,7 +45,7 @@ const JobItem = ({item}) => {
                     <Button className='favoriteRight' buttonType={BUTTON_TYPES.addToFavorites}><Favorites ref={favoritesIconRef}/></Button>
                     <Button buttonType={BUTTON_TYPES.baseMini} onClick={goToJob}>apply now</Button>
                 </div>
-                <p><span>published: {jobDate}</span></p>
+                <p><span>{jobDate}</span></p>
             </Actions>
         </JobItemSt>
     )

@@ -4,6 +4,10 @@ import { useRef } from 'react';
 import { useContext } from 'react';
 import { LoginContext } from '../../../context/login.context';
 import Close from '../../../assets/buttons/x.svg';
+import { 
+    signInAuthWithEmailAndPassword,
+    signInAuthWithGoogle
+} from '../../../util/firebase.js';
 
 const Login = () => {
     const { loginActive, setLoginActive } = useContext(LoginContext)
@@ -12,12 +16,32 @@ const Login = () => {
     const loginRef = useRef();
 
     const activeHandler = () => {
-        setLoginActive(false)
+        setLoginActive(false);
     }
 
-    const loginHandler = (e) => {
+    const loginHandler = async (e) => {
         e.preventDefault();
-        alert("in develope")
+        const email = e.target.elements['email'].value;
+        const password = e.target.elements['password'].value
+
+        try {
+            await signInAuthWithEmailAndPassword(email, password);
+            setLoginActive(false);
+            e.target.reset();
+        } catch(error) {
+            alert(error)
+        }
+
+
+    }
+
+    const googleSignIn = async () => {
+        setLoginActive(false);
+        await signInAuthWithGoogle();
+    }
+
+    const signUpHandler = () => {
+
     }
 
     return(
@@ -28,10 +52,10 @@ const Login = () => {
                 </div>
                 <section className='heading'>
                     <h3>Login to your account</h3>
-                    <p>Don't have an account ? <a className='sign-in' href='#sign-in'>Sign up!</a></p>
+                    <p>Don't have an account ? <a onClick={signUpHandler} className='sign-in' href='#sign-in'>Sign up!</a></p>
                 </section>
                 <form ref={loginRef} onSubmit={loginHandler} autoComplete='off'>
-                    <input type='email' name='name' className='login_input'  placeholder='Email' required/>
+                    <input type='email' name='email' className='login_input'  placeholder='Email' required/>
                     <input type='password' name='password' className='login_input' placeholder='Password' required/>
                     <div className='login_features'>
                         <div className='remember-me'>
@@ -45,7 +69,7 @@ const Login = () => {
                 <div className='potentials'>
                     <h6>Log in using your account on:</h6>
                     <div>
-                        <button className='potentials-btn'>Google</button>
+                        <button className='potentials-btn' onClick={googleSignIn}>Google</button>
                         <button className='potentials-btn'>Microsoft</button>
                     </div>
                 </div>
