@@ -69,49 +69,33 @@ nav {
     background-color: rgb(12, 170, 65);
 }
 
-@media screen and (max-width: 510px){
+@media screen and (max-width: 450px){
     .nav-logo {
-        width: 20rem;
+        width: 16rem;
     }
 
-    .nav_list {
-        height: 0;
-
-        position: absolute;
-        top: 6rem;
-        width: 90%;
-
-        flex-direction: column-reverse;
-        gap: 0.5rem;
-
-        background-color: #ddefd6;
-
-
-
-    
-        -webkit-border-radius: 0.4rem;
-        -moz-border-radius: 0.4rem;
-        -ms-border-radius: 0.4rem;
-        -o-border-radius: 0.4rem;
-        border-radius: 0.4rem;
-    }
-
-    .login,
     .nav_post_job {
-        width: 100%;
-        padding: 2rem 0;
-        text-align: center;
-        border: 1px solid gray;
-        background-color: #a2d2ff;
-        color: black;
-        font-size: 1.8rem;
-        font-weight: 600;
-        color: #2d2d2d;
+        padding: 1.2rem;
     }
-
 
 }
 
+@media screen and (max-width: 400px){
+    .nav-logo {
+        width: 14rem;
+    }
+
+    .nav_post_job {
+        padding: 1.2rem;
+        font-size: 1.4rem;
+
+    }
+
+    .login {
+        font-size: 1.6rem;
+    }
+
+}
 
 @media screen and (max-width: 570px){
 

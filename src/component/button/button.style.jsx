@@ -79,6 +79,7 @@ export const dropdownToggleBtn = styled.button`
     cursor: pointer;
     position: relative;
     overflow: hidden;
+
     display: none;
 
     span {
@@ -108,8 +109,8 @@ export const dropdownToggleBtn = styled.button`
         transform: translateY(0) rotate(315deg);
         transition-delay: 250ms;
     }
-
+${'' /* 
     @media screen and (max-width: 510px) {
         display: inline-block;
-    }
+    } */}
 `
