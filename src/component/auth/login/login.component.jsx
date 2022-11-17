@@ -37,6 +37,11 @@ const Login = () => {
         }
     }
 
+    const googleSignIn =  async () => {
+        await signInAuthWithGoogle();
+        setLoginActive(false);
+    }
+
     
 
     useEffect(() => {
@@ -78,7 +83,7 @@ const Login = () => {
                 <div className='potentials'>
                     <h6>Log in using your account on:</h6>
                     <div>
-                        <button className='potentials-btn' onClick={signInAuthWithGoogle}>Google</button>
+                        <button className='potentials-btn' onClick={googleSignIn}>Google</button>
                         <button className='potentials-btn'>Microsoft</button>
                     </div>
                 </div>
