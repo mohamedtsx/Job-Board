@@ -1,16 +1,20 @@
 import './login.style.css';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { useContext } from 'react';
 import { LoginContext } from '../../../context/login.context';
+import { UserContext } from '../../../context/user.context';
+
+import { getRedirectResult } from 'firebase/auth';
 import Close from '../../../assets/buttons/x.svg';
 import { 
     signInAuthWithEmailAndPassword,
-    signInAuthWithGoogle
+    signInAuthWithGoogle, auth
 } from '../../../util/firebase.js';
 
 const Login = () => {
-    const { loginActive, setLoginActive } = useContext(LoginContext)
+    const { loginActive, setLoginActive } = useContext(LoginContext);
+    const { setCurrentUser } = useContext(UserContext);
 
 
     const loginRef = useRef();
@@ -31,17 +35,22 @@ const Login = () => {
         } catch(error) {
             alert(error)
         }
-
-
     }
 
-    const googleSignIn = async () => {
-        setLoginActive(false);
-        await signInAuthWithGoogle();
-    }
+    
+
+    useEffect(() => {
+        const asyncFn = async () => {
+            const response = await getRedirectResult(auth);
+            if(response) {
+                setCurrentUser(response.user);
+            }
+        }
+        asyncFn();
+    }, []);
 
     const signUpHandler = () => {
-
+        
     }
 
     return(
@@ -69,7 +78,7 @@ const Login = () => {
                 <div className='potentials'>
                     <h6>Log in using your account on:</h6>
                     <div>
-                        <button className='potentials-btn' onClick={googleSignIn}>Google</button>
+                        <button className='potentials-btn' onClick={signInAuthWithGoogle}>Google</button>
                         <button className='potentials-btn'>Microsoft</button>
                     </div>
                 </div>

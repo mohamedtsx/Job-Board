@@ -10,8 +10,17 @@ import Login from './component/auth/login/login.component';
 import PostJob from './routes/post-job/post-job.component';
 import NotFound from './routes/not-found/not-found.component';
 
+import { useContext } from 'react';
+import { JobContext } from './context/jobs.context';
+import Loading from './component/loading/loading.component';
+
 
 function App() {
+  const { jobs } = useContext(JobContext);
+  
+  if(!jobs.length) {
+    return <Loading/>
+  }
 
   return (
     <div className="App">

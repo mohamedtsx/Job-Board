@@ -25,7 +25,7 @@ googleAuthProvider.setCustomParameters({
 
 
 const jobBoardApp = initializeApp(firebaseConfig);
-const auth = getAuth(jobBoardApp);
+export const auth = getAuth(jobBoardApp);
 
 export const signUpWithEmailAndPassword = async (email, password) => {
     return await createUserWithEmailAndPassword(auth, email, password);
@@ -36,7 +36,7 @@ export const signInAuthWithEmailAndPassword = async (email, password) => {
 }
 
 export const signInAuthWithGoogle = async () => {
-    return await signInWithRedirect(auth, googleAuthProvider);
+    await signInWithRedirect(auth, googleAuthProvider);
 }
 
 export const onAuthChange = (callback) => {

@@ -7,11 +7,12 @@ const Loading = () => {
 
 
     return(
-        <>
-            <svg>
+        <div className='loader-container'>
+
+            <svg className='loader-svg'>
                 <circle cx='70' cy='70' r='70'></circle>
             </svg>
-        </>
+        </div>
 
     )
 }
