@@ -36,7 +36,7 @@ export const signInAuthWithEmailAndPassword = async (email, password) => {
 }
 
 export const signInAuthWithGoogle = async () => {
-    await signInWithRedirect(auth, googleAuthProvider);
+    await signInWithPopup(auth, googleAuthProvider);
 }
 
 export const onAuthChange = (callback) => {

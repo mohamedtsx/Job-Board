@@ -7,15 +7,16 @@
 
 .hero-text h1,
 .hero-text h4 {
+    -webkit-animation: revealTextReverse 1s ease-in-out forwards;
     animation: revealTextReverse 1s ease-in-out forwards;
 }
 
 .hero-text h1 {
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 
 .hero-text h4 {
-    animation-delay: 3s;
+    animation-delay: 0s;
 }
 
 
@@ -30,31 +31,31 @@
     height: 100%;
     transform-origin: right;
     animation: revealText 1s ease-in-out forwards;
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
 
 .hero-text h4::before,
 .hero-text p::before {
-    animation-delay: 4s;
+    animation-delay: 3s;
 }
 
 .hero-text p {
     opacity: 0;
     font-weight: 400;
     animation: fadIn 1s linear forwards;
-    animation-delay: 5s;
+    animation-delay: 4s;
 }
 
 .start-apply {
     opacity: 0;
     animation: fadeInBottom 500ms linear forwards;
-    animation-delay: 5.5s;
+    animation-delay: 4.5s;
 }
 
 .hero-image {
     opacity: 0;
     animation: fadIn 1s linear forwards;
-    animation-delay: 6s;
+    animation-delay: 5s;
 }
 
 @keyframes fadeInBottom {
