@@ -13,7 +13,7 @@ import {
 } from '../../../util/firebase.js';
 
 const Login = () => {
-    const { loginActive, setLoginActive } = useContext(LoginContext);
+    const { loginActive, setLoginActive, setLoginPending } = useContext(LoginContext);
     const { setCurrentUser } = useContext(UserContext);
 
     const loginRef = useRef();
@@ -37,8 +37,10 @@ const Login = () => {
     }
 
     const googleSignIn =  async () => {
+        setLoginPending(true);
         setLoginActive(false);
         await signInAuthWithGoogle();
+        setLoginPending(false);
     }
 
     
