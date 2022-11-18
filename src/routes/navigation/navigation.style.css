@@ -40,6 +40,8 @@ nav {
     text-transform: capitalize;
     color: #fff;
     cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .nav_post_job {
