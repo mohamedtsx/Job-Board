@@ -73,7 +73,7 @@ const PostJob = () => {
         if(!currentUser) {
             setLoginActive(!loginActive)
         } else {
-            // postJob(jobCreateFormRef.current, logoFormData, navigate);
+            postJob(jobCreateFormRef.current, logoFormData, navigate);
         } 
     }
 
