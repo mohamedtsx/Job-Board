@@ -57,22 +57,22 @@ const BaseFormInputs = () => {
 
             <div ref={emailRef} className='group hidden'>
                 <label className='post-form_label' htmlFor='email'>Email<span className='input-selector'>*</span></label>
-                <input className='post-form_input' type='email' name='company_email' id='email' defaultValue={KNOWN_INFO.email} />
+                <input className='post-form_input' type='email' name='company_email' id='email' defaultValue={KNOWN_INFO.email} required/>
             </div>
 
             <div ref={companyRef} className='group hidden'>
                 <label className='post-form_label' htmlFor='company_name'>Company<span className='input-selector'>*</span></label>
-                <input className='post-form_input' type='text' name='company_name' id='company_name' defaultValue={KNOWN_INFO.company}/>
+                <input className='post-form_input' type='text' name='company_name' id='company_name' defaultValue={KNOWN_INFO.company} required/>
             </div>
 
             <div ref={locationRef} className='group hidden'>
                 <label className='post-form_label' htmlFor='location'>Location<span className='input-selector'>*</span></label>
-                <input className='post-form_input' type='text' name='location' id='location' defaultValue={KNOWN_INFO.location}/>
+                <input className='post-form_input' type='text' name='location' id='location' defaultValue={KNOWN_INFO.location} required/>
             </div>
 
             <div className='group'>
                 <label className='post-form_label' htmlFor='job_title'>Job title <span className='input-selector'>*</span></label>
-                <input className='post-form_input' type='text' name='job_title' id='job_title' />
+                <input className='post-form_input' type='text' name='job_title' id='job_title' required/>
             </div>
 
         </>

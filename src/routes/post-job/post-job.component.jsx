@@ -13,8 +13,8 @@ import TalentIllustrate from '../../assets/postajob.webp';
 import DollarSign from '../../assets/buttons/dollar.svg'
 import UploadFile from '../../assets/upload-file.jpg';
 
-import { useState } from 'react';
-
+import { useState, userContext } from 'react';
+import { UserContext } from '../../context/user.context';
 import postJob from '../../api/post-job.api';
 
 
@@ -27,6 +27,7 @@ const PostJob = () => {
     const logoRef = useRef();
 
     const navigate = useNavigate();
+    const { currentUser } = useContext(UserContext);
 
     const [salaryType, setSalaryType] = useState();
     
@@ -53,7 +54,7 @@ const PostJob = () => {
 
 
 
-    const isLogged = false;
+    
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -68,10 +69,11 @@ const PostJob = () => {
         //     console.log(logoFormData.get('file'));
         // console.groupEnd();
 
-        if(!isLogged) {
+
+        if(!currentUser) {
             setLoginActive(!loginActive)
         } else {
-            postJob(jobCreateFormRef.current, logoFormData, navigate);
+            // postJob(jobCreateFormRef.current, logoFormData, navigate);
         } 
     }
 
@@ -113,7 +115,7 @@ const PostJob = () => {
                         </div>
                     </div>
                     <div className='aside flex-dc-jsb-ac'>
-                        <select name='vacancy' className='select-value'>
+                        <select name='vacancy' className='select-value' required>
                             <option className='default' value=''> -- select vacancy --</option>
                             <option value='1'>  one </option>
                             <option value='2'>  two </option>
@@ -123,7 +125,7 @@ const PostJob = () => {
                             <option value='+5'> more than 5</option>
                         </select>
                         
-                        <select name='job_type' className='select-value'>
+                        <select name='job_type' className='select-value' required>
                             <option className='default' value=''> -- select job type --</option>
                             <option value='1'>  full time </option>
                             <option value='2'>  part time </option>
@@ -142,7 +144,7 @@ const PostJob = () => {
                 <div className='group'>
                     <p className='post-form_label'>Job description <span className='input-selector'>*</span></p>
                     <div className='job-description'>
-                        <textarea className='description-text' name='job_description'></textarea>
+                        <textarea className='description-text' name='job_description' required></textarea>
                         <span className='text-background'/>
                     </div>
                 </div>
@@ -152,11 +154,11 @@ const PostJob = () => {
                     <div className='double-input'>
                         <div className='input-one flex-jsb'>
                             <img src={DollarSign} alt='dollar icon'/>
-                            <input type='number' name='min_salary' placeholder='Min'/>
+                            <input type='number' name='min_salary' placeholder='Min' required/>
                         </div>
                         <div className='input-two flex-jsb'>
                             <img src={CaretRight} alt='max-salary'/>
-                            <input type='number' name='max_salary' placeholder='Max'/>
+                            <input type='number' name='max_salary' placeholder='Max' required/>
                         </div>
                     </div>
                 </div>
