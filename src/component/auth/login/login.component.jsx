@@ -9,7 +9,8 @@ import { getRedirectResult } from 'firebase/auth';
 import Close from '../../../assets/buttons/x.svg';
 import { 
     signInAuthWithEmailAndPassword,
-    signInAuthWithGoogle, auth
+    signInAuthWithGoogle, auth,
+    signUpWithEmailAndPassword
 } from '../../../util/firebase.js';
 
 const Login = () => {
@@ -17,6 +18,9 @@ const Login = () => {
     const { setCurrentUser } = useContext(UserContext);
 
     const loginRef = useRef();
+    const emailRef = useRef();
+    const passwordRef = useRef();
+
 
     const activeHandler = () => {
         setLoginActive(false);
@@ -24,8 +28,8 @@ const Login = () => {
 
     const loginHandler = async (e) => {
         e.preventDefault();
-        const email = e.target.elements['email'].value;
-        const password = e.target.elements['password'].value;
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
 
         try {
             await signInAuthWithEmailAndPassword(email, password);
@@ -55,9 +59,9 @@ const Login = () => {
         asyncFn();
     }, []);
 
-    const signUpHandler = () => {
-        
-    }
+    // const signUpHandler = () => {
+      
+    // }
 
     return(
         <div className={`login-container ${loginActive ? 'active': ''}`}>
@@ -67,11 +71,11 @@ const Login = () => {
                 </div>
                 <section className='heading'>
                     <h3>Login to your account</h3>
-                    <p>Don't have an account ? <a onClick={signUpHandler} className='sign-in' href='#sign-in'>Sign up!</a></p>
+                    <p>Don't have an account ? <a onClick={googleSignIn} className='sign-in' href='#sign-in'>Sign up!</a></p>
                 </section>
                 <form ref={loginRef} onSubmit={loginHandler} autoComplete='off'>
-                    <input type='email' name='email' className='login_input'  placeholder='Email' required/>
-                    <input type='password' name='password' className='login_input' placeholder='Password' required/>
+                    <input ref={emailRef} type='email' name='email' className='login_input'  placeholder='Email' required/>
+                    <input ref={passwordRef} type='password' name='password' className='login_input' placeholder='Password' required/>
                     <div className='login_features'>
                         <div className='remember-me'>
                             <input type='checkbox' id='remember_user'/>

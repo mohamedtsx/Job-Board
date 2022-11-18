@@ -37,10 +37,15 @@ export const Info = styled.div`
         font-size: 2.4rem;
     }
 
-    img {
-        width: 8.2rem;
-        height: 8.2rem;
+    .image-container {
         border: 1px solid #f0f0f0;
+        background-color: #F5F7FA;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+    }
+    img {
+        width: 6.7rem;
+        height: 6.7rem;
     }
 
     .text-container {

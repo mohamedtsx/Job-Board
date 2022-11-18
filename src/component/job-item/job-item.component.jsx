@@ -27,7 +27,9 @@ const JobItem = ({item}) => {
     return(
         <JobItemSt>
             <Info>
-                <img src={company_logo} alt={`${company_name} logo`}></img>
+                <div className='image-container'>
+                    <img  src={company_logo} alt={`${company_name} logo`}></img>
+                </div>
                 <div className='text-container'>
                     <div className='job-title-container'>
                         <h1>{title}</h1>
