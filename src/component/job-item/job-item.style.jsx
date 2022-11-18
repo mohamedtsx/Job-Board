@@ -40,12 +40,12 @@ export const Info = styled.div`
     .image-container {
         border: 1px solid #f0f0f0;
         background-color: #F5F7FA;
-        padding: 1.5rem;
+        padding: 1rem;
         border-radius: 0.5rem;
     }
     img {
-        width: 6.7rem;
-        height: 6.7rem;
+        width: 6.2rem;
+        height: 6.2rem;
     }
 
     .text-container {
