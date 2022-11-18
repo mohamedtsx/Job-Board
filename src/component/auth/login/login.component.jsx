@@ -16,7 +16,6 @@ const Login = () => {
     const { loginActive, setLoginActive } = useContext(LoginContext);
     const { setCurrentUser } = useContext(UserContext);
 
-
     const loginRef = useRef();
 
     const activeHandler = () => {
@@ -26,7 +25,7 @@ const Login = () => {
     const loginHandler = async (e) => {
         e.preventDefault();
         const email = e.target.elements['email'].value;
-        const password = e.target.elements['password'].value
+        const password = e.target.elements['password'].value;
 
         try {
             await signInAuthWithEmailAndPassword(email, password);
@@ -38,8 +37,8 @@ const Login = () => {
     }
 
     const googleSignIn =  async () => {
-        await signInAuthWithGoogle();
         setLoginActive(false);
+        await signInAuthWithGoogle();
     }
 
     

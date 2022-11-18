@@ -9,10 +9,7 @@ let sayEnough = true;
 
 export const JobContextProvider = ({children}) => {
     const [jobs, setJobs] = useState([]);
-
     const [meta, setMeta] = useState(0);
-
-    
     const value = {jobs,meta, setJobs}
 
     useEffect(() => {

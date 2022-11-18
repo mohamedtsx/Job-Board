@@ -12,6 +12,10 @@ import { getJobs } from '../../api/get-endpoint.api';
 let lastActive;
 const Jobs = () => {
     const { jobs, meta, setJobs } = useContext(JobContext);
+    
+    if(!jobs.length) {
+        return <Loading/>
+    }
 
     const goToPage = async (e) => {
         const { data } =  await getJobs(e.target.id);
@@ -30,18 +34,14 @@ const Jobs = () => {
     return(
         <section id="list" className="jobs">
             <h2>jobs listing</h2>
-            
-            {
-                !jobs ? <Loading/> : jobs.map(job => (<JobItem key={job.id} item={job}/>))
-            }
-            
+            {jobs.map(job => (<JobItem key={job.id} item={job}/>))}
             <div className='pagination'>
-            
                 {
                     [...Array(pagesNumber)].map((_,index) => {
                         return <div key={index} id={index + 1} onClick={goToPage}>{index + 1}</div>
                     })
                 }
+
             </div>
 
         </section>

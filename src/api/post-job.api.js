@@ -11,22 +11,6 @@ const errorHandler = (error) => {
 const isFormDataValid = (data) => {
     // validation... 
 
-    console.log(data) // return this object
-    /*
-        {
-            "company_email": "email@gmail.com",
-            "company_logo": "3aa58618-d55f-48f0-959e-f3066566d0e5/",
-            "company_name": "google",
-            "created_at": 1668438398193,
-            "description": "Job Description",
-            "id": "d177b67f-e9a7-4241-9b31-2eacb609c8f1",
-            "location": "Cairo",
-            "salary": "12 13k",
-            "title": "Front End Developer",
-            "type": "part time",
-            "vacancy": "5"
-        }
-    */
     return true;
 }
 
@@ -63,20 +47,6 @@ const postJob = async (form, logoFormData, navigate) => {
         "vacancy": + vacancy
     }
 
-/*
-{
-    "company_email": "email@gmail.com",
-    "company_logo": "461c2566-4759-4f19-b1cb-5118e8cc5941/",
-    "company_name": "google",
-    "created_at": "1668443392698",
-    "description": "Job Description",
-    "location": "Cairo",
-    "salary": "12 14k",
-    "title": "Front End Developer",
-    "type": 2,
-    "vacancy": 5
-}
-*/
 
     try {
         const { data } = await API.post('/upload',logoFormData);

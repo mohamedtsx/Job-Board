@@ -36,7 +36,7 @@ const Navigation = () => {
             
             <div className='nav_list'>
                 <span type='button' className='login' onClick={toggleLoginHandler}>
-                    {currentUser ? 'logout' :'login'}
+                    {!currentUser ? 'login' : 'Sign out'}
                 </span>
                 <Link className='nav_post_job' to='post-job'>post a job</Link>
             </div>

@@ -1,19 +1,37 @@
+import { useEffect } from 'react';
+import { useState } from 'react';
 import './loading.style.css';
+
+// const loaderStyle = {
+
+// }
+
+
 
 
 const Loading = () => {
-    // [ 0 : 0.5 : 4 ] => nothing, loader, problem 
-    
+    const [ active, setActive ] = useState(true);
+
+
+    useEffect(() => {
+        setTimeout(() => {
+            setActive(false);      
+        }, 6000);
+    }, [])
 
 
     return(
-        <div className='loader-container'>
-
-            <svg className='loader-svg'>
-                <circle cx='70' cy='70' r='70'></circle>
-            </svg>
-        </div>
-
+        active ? (
+            <div className='loader-container'>
+                <svg className="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                    <circle className="path" fill="none" stroke='#ddd' strokeWidth="6" strokeLinecap="round" cx="33" cy="33" r="30"></circle>
+                </svg>
+            </div>
+        ) : (
+            <div className='over-loading-message'>
+                <h1>Error Message</h1>
+            </div>
+        )
     )
 }
 

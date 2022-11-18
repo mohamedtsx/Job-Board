@@ -9,16 +9,16 @@ import Job from './routes/job/job.component';
 import Login from './component/auth/login/login.component';
 import PostJob from './routes/post-job/post-job.component';
 import NotFound from './routes/not-found/not-found.component';
-
-import { useContext } from 'react';
-import { JobContext } from './context/jobs.context';
 import Loading from './component/loading/loading.component';
+import { useContext } from 'react';
+import { LoginContext } from './context/login.context';
 
 
 function App() {
-  const { jobs } = useContext(JobContext);
   
-  if(!jobs.length) {
+  const { loginPending } = useContext(LoginContext);
+
+  if(loginPending) {
     return <Loading/>
   }
 
