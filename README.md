@@ -20,14 +20,8 @@ description ....
     <img src="relative/rate-a.svg"/>
 </details>
 
---------------------
-
-## Challenges 
-- [ ] find safe alternative to dangerouslySetInnerHTML
-
 
 --------------------
 
-🔴  project incomplete &emsp;
-🔴  feedback doesn't ready yet &emsp;
+
 🟢  [live demo](https://gdsc-job-board.netlify.app) &emsp;
