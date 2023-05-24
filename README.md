@@ -9,9 +9,11 @@
 --------------------
 
 # GDSC Job Board Landing Page
-description ....
+For a GDSC chapter job board project, I collaborated with the backend team to 
+develop intuitive job board landing and listing pages in React connecting to their 
+REST API. I created a clean, modern UI to engage users and simplify applying.
 
---------------------
+
 ## Monitor Feedback
 <details>
     <summary>Phase one</summary>
@@ -21,7 +23,7 @@ description ....
 </details>
 
 
---------------------
+
 
 
 🟢  [live demo](https://gdsc-job-board.netlify.app) &emsp;
