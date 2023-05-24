@@ -8,20 +8,24 @@ import { JobContextProvider } from './context/jobs.context';
 import { BrowserRouter } from 'react-router-dom';
 import { LoginContextProvider } from './context/login.context';
 import { UserContextProvider } from './context/user.context';
+import { ErrorContextProvider } from './context/error.context';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-  <BrowserRouter>
-      <JobContextProvider>
-        <LoginContextProvider>
-          <UserContextProvider>
-            <App />
-          </UserContextProvider>
-        </LoginContextProvider>
-      </JobContextProvider>
-  </BrowserRouter>
+    <BrowserRouter>
+      <ErrorContextProvider>
+        <JobContextProvider>
+          <LoginContextProvider>
+            <UserContextProvider>
+              <App />
+            </UserContextProvider>
+          </LoginContextProvider>
+        </JobContextProvider>
+      </ErrorContextProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

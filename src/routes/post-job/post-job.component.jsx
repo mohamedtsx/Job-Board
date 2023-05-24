@@ -16,9 +16,7 @@ import UploadFile from '../../assets/upload-file.jpg';
 import { useState, userContext } from 'react';
 import { UserContext } from '../../context/user.context';
 import postJob from '../../api/post-job.api';
-
-
-
+import { ErrorContext } from '../../context/error.context';
 
 
 const PostJob = () => {
@@ -39,6 +37,8 @@ const PostJob = () => {
 
     const uploadFileClick = () => uploadFileRef.current.click();
     const salaryTypeChanged = (e) => setSalaryType(e.target.value);
+
+    const { setError } = useContext(ErrorContext);
 
     const fileView = () => {
         const file = uploadFileRef.current.files['0']; 
@@ -64,16 +64,15 @@ const PostJob = () => {
 
         logoFormData.set('file', formData.get("logo"));
 
-        // console.group('%c Form Data', 'color: green')
-        //     console.log(formData.get("logo"));
-        //     console.log(logoFormData.get('file'));
-        // console.groupEnd();
-
-
         if(!currentUser) {
             setLoginActive(!loginActive)
         } else {
-            postJob(jobCreateFormRef.current, logoFormData, navigate);
+            postJob(
+                jobCreateFormRef.current, 
+                logoFormData, 
+                navigate,
+                setError
+            );
         } 
     }
 

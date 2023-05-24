@@ -19,7 +19,7 @@ const HeroSection = () => {
         <HeadSectionSt>
             <Hero>
                 <HeroText className='hero-text'>
-                    <h4>{meta.total}+ job listed</h4>
+                    <h4>{meta.total ? meta.total : '...'}+ job listed</h4>
                     
                     <h1>Find your dream job</h1>
                     <p>

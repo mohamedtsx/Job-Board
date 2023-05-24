@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 
 export const JobItemSt = styled.div`
-    border-reduce: 0.4rem;
     margin: 1.2rem auto;
     text-transform: capitalize;
     background-color: #fff;

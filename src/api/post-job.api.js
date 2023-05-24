@@ -1,20 +1,10 @@
 import axios from 'axios';
-import {v4 as uuidv4} from 'uuid';
+
 
 const API = axios.create({ baseURL: "https://gdsc-job-app.herokuapp.com/api" });
 
 
-const errorHandler = (error) => {
-    console.log('%c' + error, 'color: green')
-}
-
-const isFormDataValid = (data) => {
-    // validation... 
-
-    return true;
-}
-
-const postJob = async (form, logoFormData, navigate) => {
+const postJob = async (form, logoFormData, navigate, setError) => {
 
     const fields = Object.values(form)
     const formValues = fields.reduce((obj, field) => {
@@ -50,28 +40,23 @@ const postJob = async (form, logoFormData, navigate) => {
 
     try {
         const { data } = await API.post('/upload',logoFormData);
-        formData.company_logo = data.path;
-
-        if(isFormDataValid(formData)) {
-            try {
-                // const { data } = await API.post('/jobs', JSON.stringify(formData)); // => Bad request
-                const response = await fetch('https://gdsc-job-app.herokuapp.com/api/jobs', {
-                    method: 'POST',
-                    body: JSON.stringify(formData),
-                    headers: {
-                        'Content-Type': 'application/json;'
-                    }
-                });
-
-                const data = await response.json();
-                console.log(data.data);
-                navigate(`/job/${data.data.id}`);
-            } catch(error) {
-                errorHandler(error);
-            }
+        formData.company_logo = data.path;      
+        try {
+            const response = await fetch('https://gdsc-job-app.herokuapp.com/api/jobs', {
+                method: 'POST',
+                body: JSON.stringify(formData),
+                headers: {
+                    'Content-Type': 'application/json;'
+                }
+            });
+            const data = await response.json();
+            console.log(data.data);
+            navigate(`/job/${data.data.id}`);
+        } catch(error) {
+            setError(error);
         }
     } catch(error) {
-        errorHandler(error);
+        setError(error);
     }
 
 }
